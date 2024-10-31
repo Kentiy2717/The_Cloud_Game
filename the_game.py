@@ -13,7 +13,9 @@ from constants import (
     GRID_WIDTH,
     GRID_HEIGHT,
     RED, GREEN, BLUE,
-    SCREEN_CENTER
+    SCREEN_CENTER,
+    ICON,
+    BACKGROUND_IMAGE
 )
 
 screen = pg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
@@ -22,7 +24,10 @@ screen = pg.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT), 0, 32)
 SCREEN_CENTER = [(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)]
 
 # Заголовок окна игрового поля:
-pg.display.set_caption('The Game')
+pg.display.set_caption('Angry cloud')
+
+# Иконка окна игрового поля:
+pg.display.set_icon(pg.image.load(ICON))
 
 # Настройка времени:
 clock = pg.time.Clock()
@@ -81,6 +86,7 @@ def main():
     """Функция основного цикла игры"""
     # Инициализация pg:
     pg.init()
+    screen.blit(pg.image.load(BACKGROUND_IMAGE), (0, 0))
     game_object = GameObject()
 
     while True:

@@ -1,5 +1,5 @@
 # Константы для размеров поля и сетки:
-SCREEN_WIDTH, SCREEN_HEIGHT = 640, 480
+SCREEN_WIDTH, SCREEN_HEIGHT = 900, 600
 GRID_SIZE = 20
 GRID_WIDTH = SCREEN_WIDTH // GRID_SIZE
 GRID_HEIGHT = SCREEN_HEIGHT // GRID_SIZE
@@ -22,3 +22,9 @@ BLUE = (0, 0, 255)
 SPEED = 5  # 20 было. Будет возрастать в ходе игры.
 # Центр игрового поля
 SCREEN_CENTER = [(SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)]
+
+# Иконка окна игрового поля:
+ICON = 'images/icon.webp'
+
+# Фоновое изображение окна игрового поля:
+BACKGROUND_IMAGE = 'images/background_image.jpg'
